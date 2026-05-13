@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#14100c">
+<title>DAILY 英会話フレーズ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    /* App background — slightly deeper, less harsh */
+    --bg: #14100c;
+    --bg-elev: #1c1612;
+
+    /* Paper / card — muted cream, easier on the eyes */
+    --paper: #ede2cf;
+    --paper-soft: #e4d7c0;
+
+    /* Text */
+    --ink: #2a1f17;
+    --ink-soft: #574332;
+    --ink-mute: #8a7560;
+
+    /* Rules */
+    --rule: #d5c6ad;
+    --rule-soft: #ddcfb8;
+
+    /* Style tag colors — desaturated for eye comfort */
+    --casual: #3a7a4a;
+    --casual-bg: #d4e5d3;
+    --standard: #2f5d92;
+    --standard-bg: #cfdeec;
+    --emphasis: #a45a1c;
+    --emphasis-bg: #ecd7bf;
+    --empathy: #a8366a;
+    --empathy-bg: #ecc9d6;
+
+    --polite: #6a4a8a;
+    --polite-bg: #ddd0e8;
+    --formal: #2c6a6a;
+    --formal-bg: #cce0e0;
+
+    --accent: #b56826;
+    --accent-deep: #8a4a14;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: contain;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background:
+      radial-gradient(ellipse at top, #1f1812 0%, #14100c 60%),
+      var(--bg);
+    padding-bottom: 120px;
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(20, 16, 12, 0.88);
+    padding: env(safe-area-inset-top) 20px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .header-top {
+    padding-top: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .badge {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 9px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #f5ede0;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #9c8870;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .search {
+    width: 100%;
+    background: rgba(253, 248, 241, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #f5ede0;
+    padding: 11px 14px 11px 38px;
+    border-radius: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239c8870' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    background-size: 16px;
+    background-color: rgba(253, 248, 241, 0.06);
+  }
+  .search:focus { border-color: var(--accent); }
+  .search::placeholder { color: #7a6650; }
+
+  /* ---------- Section tabs (感情 / シチュエーション) ---------- */
+  .section-tabs {
+    display: flex;
+    gap: 0;
+    margin-top: 14px;
+    background: rgba(0,0,0,0.25);
+    padding: 4px;
+    border-radius: 10px;
+  }
+  .section-tab {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #9c8870;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    padding: 10px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .section-tab .jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
+  .section-tab.active {
+    background: linear-gradient(135deg, #c2691f, #a8551a);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(194, 105, 31, 0.4);
+  }
+
+  /* ---------- Style filters ---------- */
+  .filters {
+    display: flex;
+    gap: 6px;
+    padding: 12px 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter {
+    flex-shrink: 0;
+    background: rgba(253, 248, 241, 0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #c7b89e;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .filter.active {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--paper);
+  }
+
+  /* ---------- Stats ---------- */
+  .stats {
+    padding: 12px 20px 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #7a6650;
+    text-transform: uppercase;
+  }
+  .stats span { color: #c2691f; font-weight: 600; }
+
+  /* ---------- Content ---------- */
+  .content { padding: 4px 14px; }
+
+  /* Section divider with big label */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 6px 10px;
+  }
+  .section-divider .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  }
+  .section-divider .label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 13px;
+    color: #c7b89e;
+    letter-spacing: 0.05em;
+  }
+
+  /* Category card */
+  .category {
+    background: var(--paper);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 8px 24px -10px rgba(0,0,0,0.5);
+  }
+  .cat-header {
+    background: linear-gradient(135deg, #3a2614 0%, #2a1c10 100%);
+    color: #fbf3e7;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+  .cat-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    background: var(--accent);
+    padding: 3px 7px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .cat-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+  .cat-type {
+    margin-left: auto;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: rgba(251, 243, 231, 0.5);
+  }
+
+  /* Phrase row */
+  .phrase {
+    padding: 14px 16px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+  }
+  .phrase:first-of-type { border-top: none; }
+  .style-tag {
+    flex-shrink: 0;
+    width: 52px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px 4px;
+    border-radius: 5px;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+    margin-top: 2px;
+  }
+  .style-casual { background: var(--casual-bg); color: var(--casual); }
+  .style-standard { background: var(--standard-bg); color: var(--standard); }
+  .style-emphasis { background: var(--emphasis-bg); color: var(--emphasis); }
+  .style-empathy { background: var(--empathy-bg); color: var(--empathy); }
+  .style-polite { background: var(--polite-bg); color: var(--polite); }
+  .style-formal { background: var(--formal-bg); color: var(--formal); }
+
+  .phrase-body { flex: 1; min-width: 0; }
+  .en {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #2f5d92;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+  .kana {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  .ja {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+  .play-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    align-self: center;
+  }
+  .play-btn:active, .play-btn.playing {
+    background: var(--accent);
+    color: #fff;
+    transform: scale(0.95);
+  }
+  .play-btn svg { width: 14px; height: 14px; }
+
+  /* Empty state */
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #7a6650;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  /* Speed control floating bar */
+  .speed-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(34, 26, 20, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 30px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    z-index: 40;
+  }
+  .speed-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #7a6650;
+    letter-spacing: 0.15em;
+    padding: 0 10px 0 12px;
+  }
+  .speed-btn {
+    background: transparent;
+    border: none;
+    color: #c7b89e;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 12px;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .speed-btn.active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* Section-specific subtle accent */
+  .section-emotion .cat-header { background: linear-gradient(135deg, #3a2614 0%, #2a1c10 100%); }
+  .section-situation .cat-header { background: linear-gradient(135deg, #2a2814 0%, #1c1c10 100%); }
+  .section-situation .cat-num { background: #6b8a2d; }
+
+  @media (min-width: 640px) {
+    .content { max-width: 600px; margin: 0 auto; padding: 4px 20px; }
+    .header { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+    .header > * { max-width: 600px; margin-left: auto; margin-right: auto; }
+  }
+
+  /* ---------- Splash Screen ---------- */
+  .splash {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background:
+      radial-gradient(ellipse at center, #1f1812 0%, #14100c 70%),
+      var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .splash.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .splash-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2.5px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 40px rgba(181, 104, 38, 0.25), inset 0 0 30px rgba(181, 104, 38, 0.08);
+    animation: splash-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both, splash-pulse 2.4s ease-in-out 0.6s infinite;
+  }
+  .splash-logo::before {
+    content: "";
+    position: absolute;
+    top: -10px; right: -10px; bottom: -10px; left: -10px;
+    border-radius: 50%;
+    border: 1px solid rgba(181, 104, 38, 0.25);
+    animation: ring-expand 2.4s ease-out infinite;
+  }
+  .splash-logo::after {
+    content: "";
+    position: absolute;
+    top: -20px; right: -20px; bottom: -20px; left: -20px;
+    border-radius: 50%;
+    border: 1px solid rgba(181, 104, 38, 0.12);
+    animation: ring-expand 2.4s ease-out 0.6s infinite;
+  }
+
+  .splash-letter {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 68px;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-top: -4px;
+  }
+
+  .splash-text {
+    margin-top: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: #6b5640;
+    text-transform: uppercase;
+    animation: splash-fade-in 0.6s ease 0.3s both;
+  }
+  .splash-tap {
+    margin-top: 14px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #54422e;
+    opacity: 0;
+    animation: splash-fade-in 0.8s ease 1.2s both;
+  }
+
+  @keyframes splash-pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes splash-pulse {
+    0%, 100% { box-shadow: 0 0 40px rgba(181, 104, 38, 0.25), inset 0 0 30px rgba(181, 104, 38, 0.08); }
+    50% { box-shadow: 0 0 55px rgba(181, 104, 38, 0.4), inset 0 0 40px rgba(181, 104, 38, 0.12); }
+  }
+  @keyframes ring-expand {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(1.3); opacity: 0; }
+  }
+  @keyframes splash-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="splash" id="splash" role="button" aria-label="タップして英会話画面へ">
+  <div class="splash-logo">
+    <span class="splash-letter">E</span>
+  </div>
+  <div class="splash-text">Daily English</div>
+  <div class="splash-tap">tap anywhere</div>
+</div>
+
+<div class="header">
+  <div class="header-top">
+    <span class="badge">Daily</span>
+    <h1 class="title">英会話フレーズ</h1>
+  </div>
+  <div class="subtitle">Emotions & Situations · Native Pronunciation</div>
+  <input type="text" class="search" id="search" placeholder="嬉しい・英語・カナで検索">
+  <div class="section-tabs">
+    <button class="section-tab active" data-section="all">すべて</button>
+    <button class="section-tab" data-section="emotion">
+      <span class="jp">感情</span>
+      <span style="opacity:0.7;font-size:11px;">Emotion</span>
+    </button>
+    <button class="section-tab" data-section="situation">
+      <span class="jp">状況</span>
+      <span style="opacity:0.7;font-size:11px;">Situation</span>
+    </button>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-style="all">すべて</button>
+    <button class="filter" data-style="casual">カジュアル</button>
+    <button class="filter" data-style="standard">標準</button>
+    <button class="filter" data-style="emphasis">強調</button>
+    <button class="filter" data-style="empathy">共感</button>
+    <button class="filter" data-style="polite">丁寧</button>
+    <button class="filter" data-style="formal">フォーマル</button>
+  </div>
+</div>
+
+<div class="stats">表示中 <span id="count">0</span> / <span id="total">0</span> フレーズ</div>
+
+<div class="content" id="content"></div>
+
+<div class="speed-bar">
+  <span class="speed-label">SPEED</span>
+  <button class="speed-btn" data-speed="0.5">0.5×</button>
+  <button class="speed-btn" data-speed="0.75">0.75×</button>
+  <button class="speed-btn active" data-speed="1">1.0×</button>
+  <button class="speed-btn" data-speed="1.25">1.25×</button>
+</div>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+// section: "emotion" (感情) or "situation" (シチュエーション)
+// styles available:
+//   - emotion section: casual, standard, emphasis, empathy
+//   - situation section: casual, standard, polite, formal
+//     (only used when there's a real nuance difference; not forced)
+// ============================================================
+
+const DATA = [
+  // ===== EMOTION SECTION =====
+  { num: "01", title: "嬉しい", section: "emotion", phrases: [
+    { style: "casual", en: "I'm so stoked!", kana: "アィム・ソゥ・ストゥクトゥ！", ja: "めっちゃワクワク！" },
+    { style: "casual", en: "I'm so excited!", kana: "アィム・ソゥ・イクサィディドゥ！", ja: "すごく興奮してる！" },
+    { style: "standard", en: "I'm happy.", kana: "アィム・ハァピィ。", ja: "嬉しいです。" },
+    { style: "standard", en: "I'm delighted.", kana: "アィム・ディラィディドゥ。", ja: "喜んでいます。" },
+    { style: "emphasis", en: "I'm absolutely thrilled!", kana: "アィム・アブソルートゥリィ・スリィルドゥ！", ja: "最高に感激しています！" },
+    { style: "empathy", en: "I'm happy for you!", kana: "アィム・ハァピィ・フォユー！", ja: "自分のことのように嬉しいよ！" },
+    { style: "empathy", en: "That's great!", kana: "ザァッツ・グレィトゥ！", ja: "それは素晴らしい！" },
+  ]},
+  { num: "02", title: "悲しい / 残念", section: "emotion", phrases: [
+    { style: "casual", en: "That's a bummer.", kana: "ザァッツァ・バマー。", ja: "それはガッカリだね。" },
+    { style: "casual", en: "That sucks.", kana: "ザァッ・サァックス。", ja: "最悪だね。" },
+    { style: "standard", en: "It's a shame.", kana: "イッツァ・シェィム。", ja: "それは残念なことです。" },
+    { style: "emphasis", en: "I'm devastated.", kana: "アィム・デヴァスティディドゥ。", ja: "絶望的なほど悲しいです。" },
+    { style: "empathy", en: "I'm sorry to hear that.", kana: "アィム・ソゥリィ・トゥ・ヒアザァッ。", ja: "それを聞いて残念です。" },
+  ]},
+  { num: "03", title: "驚き", section: "emotion", phrases: [
+    { style: "casual", en: "No way!", kana: "ノォゥ・ウェィ！", ja: "マジで！？" },
+    { style: "standard", en: "It's incredible.", kana: "イッツィンクレダブル。", ja: "信じられないことです。" },
+    { style: "emphasis", en: "I'm stunned.", kana: "アィム・スタァンドゥ。", ja: "呆然としています。" },
+    { style: "emphasis", en: "I'm shocked.", kana: "アィム・シャァクトゥ。", ja: "衝撃を受けています。" },
+    { style: "empathy", en: "You must be surprised.", kana: "ユゥ・マスビィ・サプラィズドゥ。", ja: "さぞかし驚いたでしょう。" },
+  ]},
+  { num: "04", title: "感謝", section: "emotion", phrases: [
+    { style: "casual", en: "Thanks.", kana: "サァンクス。", ja: "ありがと。" },
+    { style: "standard", en: "Thank you.", kana: "サァンキュゥ。", ja: "ありがとうございます。" },
+    { style: "emphasis", en: "I'm grateful.", kana: "アィム・グレィトゥフォ。", ja: "深く感謝しております。" },
+    { style: "empathy", en: "You're very welcome.", kana: "ヨァ・ヴェリィ・ウェカム。", ja: "どういたしまして。" },
+  ]},
+  { num: "05", title: "怒り / 不満", section: "emotion", phrases: [
+    { style: "casual", en: "That's annoying.", kana: "ザァッツァ・ノィン。", ja: "それムカつく。" },
+    { style: "standard", en: "I'm not happy about it.", kana: "アィム・ノッ・ハァピィ・アバゥティッ。", ja: "それは納得できません。" },
+    { style: "emphasis", en: "I'm furious.", kana: "アィム・フューリィアス。", ja: "激怒しています。" },
+    { style: "empathy", en: "I understand your frustration.", kana: "アィ・アンダスタンジュァ・フラストレィシュン。", ja: "その怒り、わかります。" },
+  ]},
+  { num: "06", title: "退屈 / うんざり", section: "emotion", phrases: [
+    { style: "casual", en: "I'm bored.", kana: "アィム・ボォードゥ。", ja: "退屈だよ。" },
+    { style: "standard", en: "It's tedious.", kana: "イッツ・ティィディアス。", ja: "退屈で骨の折れる作業です。" },
+    { style: "emphasis", en: "I'm fed up with it.", kana: "アィム・フェダップ・ウィズィッ。", ja: "もう、うんざりです。" },
+    { style: "empathy", en: "I get why you're bored.", kana: "アィ・ゲッ・ワィ・ユア・ボォードゥ。", ja: "飽きちゃう気持ち、わかるよ。" },
+  ]},
+  { num: "07", title: "安心", section: "emotion", phrases: [
+    { style: "casual", en: "Chill out.", kana: "チラゥトゥ。", ja: "落ち着いて。" },
+    { style: "standard", en: "I'm relaxed.", kana: "アィム・リラックストゥ。", ja: "リラックスしています。" },
+    { style: "emphasis", en: "What a relief!", kana: "ワッタ・リリィフ！", ja: "本当にホッとした！" },
+    { style: "empathy", en: "Don't worry about it.", kana: "ドン・ウォリィ・アバゥリッ。", ja: "気にしないで。" },
+  ]},
+  { num: "08", title: "誇らしい", section: "emotion", phrases: [
+    { style: "casual", en: "Good job.", kana: "グッ・ジャァブ。", ja: "よくやったね。" },
+    { style: "standard", en: "It's a great achievement.", kana: "イッツァ・グレィタチィヴメントゥ。", ja: "素晴らしい功績です。" },
+    { style: "emphasis", en: "I'm proud of it.", kana: "アィム・プラゥダヴィッ。", ja: "本当に誇りに思っています。" },
+    { style: "empathy", en: "You should be proud.", kana: "ユゥ・シュッビィ・プラゥドゥ。", ja: "自分を誇っていいよ。" },
+  ]},
+  { num: "09", title: "困惑", section: "emotion", phrases: [
+    { style: "casual", en: "I'm confused.", kana: "アィム・カンフューズドゥ。", ja: "ちょっと混乱してる。" },
+    { style: "standard", en: "I don't quite get it.", kana: "アィ・ドン・クワィッ・ゲッリッ。", ja: "よく理解できていません。" },
+    { style: "emphasis", en: "I'm bewildered.", kana: "アィム・ビゥィルダードゥ。", ja: "ひどく困惑しています。" },
+    { style: "empathy", en: "That must be confusing.", kana: "ザァッ・マスビィ・カンフューズィン。", ja: "それは分かりにくくて困るよね。" },
+  ]},
+  { num: "10", title: "祝う", section: "emotion", phrases: [
+    { style: "casual", en: "Cheers!", kana: "チァーズ！", ja: "乾杯！" },
+    { style: "standard", en: "Congratulations.", kana: "カングラチュレィシュンズ。", ja: "おめでとうございます。" },
+    { style: "emphasis", en: "Heartfelt congratulations!", kana: "ハートゥフェトゥ・カングラチュレィシュンズ！", ja: "心よりお祝い申し上げます！" },
+    { style: "empathy", en: "I'm thrilled for your success!", kana: "アィム・スリィルドゥ・フォヤ・サクセス！", ja: "あなたの成功が本当に嬉しいよ！" },
+  ]},
+  { num: "11", title: "尊重", section: "emotion", phrases: [
+    { style: "casual", en: "Fair enough.", kana: "フェア・イナフ。", ja: "なるほどね。" },
+    { style: "standard", en: "I understand your point.", kana: "アィ・アンダスタンジュァ・ポィントゥ。", ja: "ご意見は理解しました。" },
+    { style: "empathy", en: "I respect your opinion.", kana: "アィ・リスペクチュア・オピニオン。", ja: "あなたの考えを尊重するよ。" },
+  ]},
+  { num: "12", title: "知る", section: "emotion", phrases: [
+    { style: "casual", en: "I know.", kana: "アィ・ノォゥ。", ja: "知ってるよ。" },
+    { style: "standard", en: "I'm aware of it.", kana: "アィム・アウェァロヴィッ。", ja: "承知しております。" },
+    { style: "emphasis", en: "I'm familiar with it.", kana: "アィム・ファミリァ・ウィズィッ。", ja: "熟知しております。" },
+    { style: "empathy", en: "You seem to know a lot.", kana: "ユゥ・スィーム・トゥ・ノォゥ・ァ・ラッ。", ja: "よくご存知ですね。" },
+  ]},
+
+  // ===== SITUATION SECTION =====
+  // ここからシチュエーション系。
+  // 強調/共感は無理に入れない。代わりにスタイルは:
+  //   casual = 友達/同僚に対して
+  //   standard = 一般的・標準
+  //   polite = 丁寧・敬語レベル
+  //   formal = ビジネス・かなりフォーマル
+  // ニュアンスがしっかり違う時だけスタイルを入れる。
+
+  { num: "13", title: "あいさつ", section: "situation", phrases: [
+    { style: "casual", en: "Hey.", kana: "ヘィ。", ja: "やあ。" },
+    { style: "casual", en: "What's up?", kana: "ワァッツァプ？", ja: "元気？" },
+    { style: "standard", en: "Hello.", kana: "ヘロォゥ。", ja: "こんにちは。" },
+    { style: "standard", en: "How are you?", kana: "ハゥアーユゥ？", ja: "お元気ですか？" },
+    { style: "polite", en: "Good to see you.", kana: "グッ・トゥ・スィーユー。", ja: "お会いできて嬉しいです。" },
+  ]},
+
+  { num: "14", title: "自己紹介・初対面", section: "situation", phrases: [
+    { style: "casual", en: "Nice to meet you!", kana: "ナィス・トゥ・ミィチュウ！", ja: "はじめまして！" },
+    { style: "standard", en: "It's a pleasure to meet you.", kana: "イッツァ・プレジャー・トゥ・ミィチュウ。", ja: "お会いできて光栄です。" },
+    { style: "polite", en: "I've heard so much about you.", kana: "アィヴ・ハードゥ・ソゥ・マァチ・アバゥチュウ。", ja: "お噂はかねがね伺っております。" },
+    { style: "standard", en: "Let's keep in touch.", kana: "レッツ・キィピン・タッチ。", ja: "これからも連絡取り合おうね。" },
+  ]},
+
+  { num: "15", title: "電話対応", section: "situation", phrases: [
+    { style: "casual", en: "Who's this?", kana: "フゥズ・ディス？", ja: "誰？" },
+    { style: "standard", en: "May I ask who's calling?", kana: "メィ・アィ・アスク・フゥズ・コォリン？", ja: "どちら様でしょうか？" },
+    { style: "polite", en: "Thank you for calling.", kana: "サァンキュゥ・フォ・コォリン。", ja: "お電話ありがとうございます。" },
+    { style: "formal", en: "Please hold the line.", kana: "プリィズ・ホォゥドゥ・ザ・ラィン。", ja: "少々お待ちください。" },
+  ]},
+
+  { num: "16", title: "メール・連絡", section: "situation", phrases: [
+    { style: "casual", en: "Just a quick note.", kana: "ジャスタ・クウィッ・ノォゥトゥ。", ja: "一応お知らせまで。" },
+    { style: "standard", en: "Please find attached.", kana: "プリィズ・ファィンドゥ・アタッチトゥ。", ja: "添付ファイルをご確認ください。" },
+    { style: "formal", en: "Please respond at your earliest convenience.", kana: "プリィズ・リスパンドゥ・アッチョア・アーリエストゥ・カンヴィニエンス。", ja: "できるだけ早くご返信ください。" },
+    { style: "polite", en: "Thank you for your patience.", kana: "サァンキュゥ・フォヤ・ペィシェンス。", ja: "お待たせして恐縮です。" },
+  ]},
+
+  { num: "17", title: "確認・了解", section: "situation", phrases: [
+    { style: "casual", en: "Got it.", kana: "ガディッ。", ja: "了解。" },
+    { style: "casual", en: "Sure.", kana: "シュア。", ja: "もちろん。" },
+    { style: "standard", en: "Understood.", kana: "アンダストゥッドゥ。", ja: "了解しました。" },
+    { style: "polite", en: "Certainly.", kana: "サートゥンリィ。", ja: "かしこまりました。" },
+  ]},
+
+  { num: "18", title: "依頼する", section: "situation", phrases: [
+    { style: "casual", en: "Can you help me?", kana: "キャニュゥ・ヘゥプ・ミィ？", ja: "ちょっと手伝ってくれる？" },
+    { style: "standard", en: "Could you help me?", kana: "クッジュゥ・ヘゥプ・ミィ？", ja: "手伝っていただけますか？" },
+    { style: "polite", en: "Would you mind helping me?", kana: "ウッジュゥ・マィンドゥ・ヘゥピン・ミィ？", ja: "お手伝いいただけませんでしょうか？" },
+  ]},
+
+  { num: "19", title: "断る・辞退", section: "situation", phrases: [
+    { style: "casual", en: "No way.", kana: "ノォゥ・ウェィ。", ja: "無理。" },
+    { style: "standard", en: "I'll pass.", kana: "アィゥ・パァス。", ja: "辞退します。" },
+    { style: "polite", en: "I'm afraid I can't.", kana: "アィム・アフレィドゥ・アィ・キャントゥ。", ja: "申し訳ありませんが、できかねます。" },
+  ]},
+
+  { num: "20", title: "謝罪", section: "situation", phrases: [
+    { style: "casual", en: "My bad.", kana: "マィ・バァドゥ。", ja: "ごめん、私のせい。" },
+    { style: "standard", en: "I'm sorry.", kana: "アィム・ソォリィ。", ja: "ごめんなさい。" },
+    { style: "polite", en: "I sincerely apologize.", kana: "アィ・シンセァリィ・アポロジャィズ。", ja: "心よりお詫び申し上げます。" },
+  ]},
+
+  { num: "21", title: "待つ", section: "situation", phrases: [
+    { style: "casual", en: "Hold on.", kana: "ホォゥドゥ・オン。", ja: "ちょっと待って。" },
+    { style: "standard", en: "Please wait.", kana: "プリィズ・ウェィトゥ。", ja: "お待ちください。" },
+    { style: "polite", en: "I need you to wait.", kana: "アィ・ニィジュウ・トゥ・ウェィトゥ。", ja: "お待ちいただけますか。" },
+    { style: "empathy", en: "Take your time.", kana: "ティキュア・タィム。", ja: "急がなくていいよ。" },
+  ]},
+
+  { num: "22", title: "覚える・注意", section: "situation", phrases: [
+    { style: "casual", en: "Remember that.", kana: "リメンバー・ザァッ。", ja: "覚えといて。" },
+    { style: "standard", en: "Keep in mind that…", kana: "キィピン・マィンドゥ・ザァッ…", ja: "念頭に置いてください。" },
+    { style: "standard", en: "Bear in mind that…", kana: "ベァリン・マィンドゥ・ザァッ…", ja: "心に留めておいてください。" },
+  ]},
+
+  { num: "23", title: "説明する", section: "situation", phrases: [
+    { style: "casual", en: "Actually…", kana: "アクチュアリィ…", ja: "実はね。" },
+    { style: "standard", en: "To answer your question…", kana: "トゥ・アンサー・ヨア・クウェスチュン…", ja: "ご質問にお答えすると…" },
+    { style: "polite", en: "Let me be clear.", kana: "レッミィ・ビィ・クリァ。", ja: "明確に申し上げます。" },
+    { style: "empathy", en: "I hope this helps.", kana: "アィ・ホゥプ・ディス・ヘゥプス。", ja: "これが役立つといいな。" },
+  ]},
+
+  { num: "24", title: "秘密・秘匿", section: "situation", phrases: [
+    { style: "casual", en: "Keep it quiet.", kana: "キィピッ・クワィエットゥ。", ja: "内緒にしといて。" },
+    { style: "standard", en: "This is confidential.", kana: "ディス・イズ・カンフィデンシャゥ。", ja: "これは機密事項です。" },
+  ]},
+
+  { num: "25", title: "道を尋ねる", section: "situation", phrases: [
+    { style: "standard", en: "Excuse me, where is…?", kana: "エクスキューズ・ミィ、ウェアリィズ…？", ja: "すみません、…はどこですか？" },
+    { style: "standard", en: "How do I get there?", kana: "ハゥ・ドゥ・アィ・ゲッ・ゼァ？", ja: "そこへはどう行けばいいですか？" },
+    { style: "standard", en: "Is it within walking distance?", kana: "イズィッ・ウィズィン・ウォーキン・ディスタンス？", ja: "歩いて行ける距離ですか？" },
+  ]},
+
+  { num: "26", title: "ホテル・チェックイン", section: "situation", phrases: [
+    { style: "casual", en: "I'm checking in.", kana: "アィム・チェッキニン。", ja: "チェックインします。" },
+    { style: "standard", en: "I have a reservation.", kana: "アィ・ハヴァ・レザヴェィシュン。", ja: "予約しています。" },
+    { style: "polite", en: "I'd like to upgrade my room.", kana: "アィドゥ・ラィク・トゥ・アップグレィッ・マィ・ルゥム。", ja: "部屋をアップグレードしたいです。" },
+    { style: "standard", en: "Could you recommend something to do nearby?", kana: "クッジュウ・レカメンドゥ・サムスィン・トゥ・ドゥ・ニァバィ？", ja: "近くで何かおすすめは？" },
+  ]},
+
+  { num: "27", title: "空港・チケット", section: "situation", phrases: [
+    { style: "standard", en: "I'd like to check in.", kana: "アィドゥ・ラィク・トゥ・チェッキニン。", ja: "搭乗手続きをお願いします。" },
+    { style: "standard", en: "How many bags can I check?", kana: "ハゥ・メニィ・バァグズ・キャナィ・チェック？", ja: "預けられる荷物は何個ですか？" },
+    { style: "standard", en: "What's the boarding gate?", kana: "ワッツ・ザ・ボーディン・ゲィトゥ？", ja: "搭乗ゲートはどこですか？" },
+  ]},
+
+  { num: "28", title: "レストラン", section: "situation", phrases: [
+    { style: "standard", en: "Table for two, please.", kana: "ティボォゥ・フォ・トゥウ、プリィズ。", ja: "2名でお願いします。" },
+    { style: "standard", en: "Could I see the menu?", kana: "クッダィ・スィー・ザ・メニュ？", ja: "メニューをいただけますか？" },
+    { style: "standard", en: "Check, please.", kana: "チェック、プリィズ。", ja: "お会計お願いします。" },
+  ]},
+
+  { num: "29", title: "ショッピング", section: "situation", phrases: [
+    { style: "casual", en: "Just looking, thanks.", kana: "ジャスト・ルッキン、サァンクス。", ja: "見てるだけです、ありがとう。" },
+    { style: "standard", en: "How much is this?", kana: "ハゥ・マッチィズ・ディス？", ja: "これはいくらですか？" },
+    { style: "standard", en: "Do you have this in another size?", kana: "ドゥ・ユゥ・ハヴ・ディス・イン・アナザー・サィズ？", ja: "別のサイズはありますか？" },
+  ]},
+
+  { num: "30", title: "ビジネス・会議", section: "situation", phrases: [
+    { style: "standard", en: "Let's get started.", kana: "レッツ・ゲッ・スターディッ。", ja: "それでは始めましょう。" },
+    { style: "standard", en: "Could you elaborate on that?", kana: "クッジュウ・イラボレィトゥ・オン・ザァッ？", ja: "もう少し詳しく説明していただけますか？" },
+    { style: "formal", en: "I'd like to follow up on our discussion.", kana: "アィドゥ・ラィク・トゥ・フォロゥアップ・オン・ナワー・ディスカッシュン。", ja: "先日の議論についてフォローアップさせてください。" },
+  ]},
+];
+
+// ============================================================
+// STYLE LABELS
+// ============================================================
+const STYLE_LABEL = {
+  casual: "カジュアル",
+  standard: "標準",
+  emphasis: "強調",
+  empathy: "共感",
+  polite: "丁寧",
+  formal: "フォーマル",
+};
+
+// Which filter buttons to show per section
+const SECTION_STYLES = {
+  emotion: ["casual", "standard", "emphasis", "empathy"],
+  situation: ["casual", "standard", "polite", "formal"],
+  all: ["casual", "standard", "emphasis", "empathy", "polite", "formal"],
+};
+
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+  section: "all",   // all | emotion | situation
+  style: "all",     // all | casual | standard | emphasis | empathy | polite | formal
+  search: "",
+  speed: 1,
+};
+
+let currentAudio = null;
+
+// ============================================================
+// RENDER
+// ============================================================
+function render() {
+  const content = document.getElementById("content");
+  const q = state.search.trim().toLowerCase();
+
+  const sectionsToShow =
+    state.section === "all" ? ["emotion", "situation"]
+    : [state.section];
+
+  let totalCount = 0;
+  let shownCount = 0;
+  let html = "";
+
+  for (const sec of sectionsToShow) {
+    const sectionCats = DATA.filter(c => c.section === sec);
+    let sectionHtml = "";
+    let sectionShown = 0;
+
+    for (const cat of sectionCats) {
+      const filtered = cat.phrases.filter(p => {
+        if (state.style !== "all" && p.style !== state.style) return false;
+        if (q) {
+          const blob = (p.en + p.kana + p.ja + cat.title).toLowerCase();
+          if (!blob.includes(q)) return false;
+        }
+        return true;
+      });
+
+      totalCount += cat.phrases.length;
+      if (filtered.length === 0) continue;
+      shownCount += filtered.length;
+      sectionShown += filtered.length;
+
+      const typeLabel = sec === "emotion" ? "Emotion" : "Situation";
+
+      sectionHtml += `
+        <div class="category section-${sec}">
+          <div class="cat-header">
+            <span class="cat-num">No.${cat.num}</span>
+            <span class="cat-title">${cat.title}</span>
+            <span class="cat-type">${typeLabel}</span>
+          </div>
+          ${filtered.map(p => `
+            <div class="phrase">
+              <span class="style-tag style-${p.style}">${STYLE_LABEL[p.style]}</span>
+              <div class="phrase-body">
+                <div class="en">${p.en}</div>
+                <div class="kana">${p.kana}</div>
+                <div class="ja">${p.ja}</div>
+              </div>
+              <button class="play-btn" data-text="${p.en.replace(/"/g, '&quot;')}" aria-label="再生">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    if (sectionShown > 0 && state.section === "all") {
+      const sectionLabel = sec === "emotion"
+        ? "感情 — Emotion"
+        : "状況 — Situation";
+      html += `
+        <div class="section-divider">
+          <span class="line"></span>
+          <span class="label">${sectionLabel}</span>
+          <span class="line"></span>
+        </div>
+      `;
+    }
+    html += sectionHtml;
+  }
+
+  if (shownCount === 0) {
+    html = `<div class="empty">該当するフレーズがありません</div>`;
+  }
+
+  content.innerHTML = html;
+  document.getElementById("count").textContent = shownCount;
+  document.getElementById("total").textContent = totalCount;
+
+  // Update filter visibility based on section
+  updateFilters();
+
+  // Attach play buttons
+  document.querySelectorAll(".play-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const text = btn.dataset.text;
+      speak(text, btn);
+    });
+  });
+}
+
+function updateFilters() {
+  const allowed = SECTION_STYLES[state.section];
+  document.querySelectorAll(".filter").forEach(f => {
+    const style = f.dataset.style;
+    if (style === "all" || allowed.includes(style)) {
+      f.style.display = "";
+    } else {
+      f.style.display = "none";
+      // if the currently-selected filter is hidden, reset to all
+      if (state.style === style) {
+        state.style = "all";
+        document.querySelector('.filter[data-style="all"]').classList.add("active");
+        f.classList.remove("active");
+      }
+    }
+  });
+}
+
+// ============================================================
+// SPEECH (Web Speech API)
+// ============================================================
+function speak(text, btn) {
+  if (!("speechSynthesis" in window)) {
+    alert("お使いのブラウザは音声合成に対応していません。");
+    return;
+  }
+
+  // Cancel any ongoing speech
+  window.speechSynthesis.cancel();
+  document.querySelectorAll(".play-btn.playing").forEach(b => b.classList.remove("playing"));
+
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = "en-US";
+  utter.rate = state.speed;
+  utter.pitch = 1;
+
+  // Try to pick a high-quality English voice
+  const voices = window.speechSynthesis.getVoices();
+  const preferred = voices.find(v => /en-US/i.test(v.lang) && /(Samantha|Google US English|Alex|Karen|Daniel)/i.test(v.name))
+    || voices.find(v => /en-US/i.test(v.lang))
+    || voices.find(v => /en/i.test(v.lang));
+  if (preferred) utter.voice = preferred;
+
+  btn.classList.add("playing");
+  utter.onend = () => btn.classList.remove("playing");
+  utter.onerror = () => btn.classList.remove("playing");
+
+  window.speechSynthesis.speak(utter);
+}
+
+// Preload voices (some browsers need this)
+if ("speechSynthesis" in window) {
+  window.speechSynthesis.onvoiceschanged = () => {};
+  window.speechSynthesis.getVoices();
+}
+
+// ============================================================
+// SPLASH SCREEN
+// ============================================================
+// Auto-hide after 3 seconds, or hide on tap (whichever first).
+// Tapping also "unlocks" speech synthesis on iOS Safari, which
+// requires a user gesture before the first utterance.
+let splashDismissed = false;
+function dismissSplash() {
+  if (splashDismissed) return;
+  splashDismissed = true;
+  const splash = document.getElementById("splash");
+  if (!splash) return;
+
+  // Safari/iOS: kick the speech engine with a silent utterance
+  // inside the user gesture so later .speak() calls work.
+  try {
+    if ("speechSynthesis" in window) {
+      const warm = new SpeechSynthesisUtterance("");
+      warm.volume = 0;
+      window.speechSynthesis.speak(warm);
+      window.speechSynthesis.cancel();
+    }
+  } catch (e) { /* no-op */ }
+
+  splash.classList.add("hide");
+  setTimeout(() => { splash.style.display = "none"; }, 600);
+}
+
+document.getElementById("splash").addEventListener("click", dismissSplash);
+document.getElementById("splash").addEventListener("touchstart", dismissSplash, { passive: true });
+setTimeout(dismissSplash, 5000);
+
+// ============================================================
+// EVENT HANDLERS
+// ============================================================
+document.querySelectorAll(".section-tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".section-tab").forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    state.section = tab.dataset.section;
+    render();
+  });
+});
+
+document.querySelectorAll(".filter").forEach(f => {
+  f.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(x => x.classList.remove("active"));
+    f.classList.add("active");
+    state.style = f.dataset.style;
+    render();
+  });
+});
+
+document.getElementById("search").addEventListener("input", (e) => {
+  state.search = e.target.value;
+  render();
+});
+
+document.querySelectorAll(".speed-btn").forEach(b => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll(".speed-btn").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    state.speed = parseFloat(b.dataset.speed);
+  });
+});
+
+// Init
+render();
+</script>
+</body>
+</html>
